@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-xhr.open('GET', './JSONTEST/employees.json');
+xhr.open('GET', 'JSONTEST/employees.json');
 xhr.onreadystatechange = function () {
   if(xhr.readyState === 4 && xhr.status === 200) {
     var employees = JSON.parse(xhr.responseText);
@@ -39,5 +39,5 @@ xhr.onreadystatechange = function() {
     document.getElementById('employeeList').innerHTML = statusHTML;
   }
 };
-xhr.open('GET', 'data/employees.json');
+xhr.open('GET', 'JSONTEST/employees.json');
 xhr.send();
